@@ -1,0 +1,10 @@
+sequence:
+ id: sequence-1
+ steps:
+  - test-step:
+     id: test-step-1
+  - test-step:
+     id: test-step-2
+  - test-step:
+     id: test-step-3
+ isolate: true

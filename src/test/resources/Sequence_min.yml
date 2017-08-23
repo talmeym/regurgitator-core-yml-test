@@ -1,0 +1,5 @@
+sequence:
+ id: sequence-1
+ steps:
+  - test-step:
+     id: test-step-1
