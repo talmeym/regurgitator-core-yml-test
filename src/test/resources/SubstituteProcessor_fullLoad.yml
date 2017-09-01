@@ -1,0 +1,11 @@
+regurgitator-configuration:
+ id: regurgitator-configuration-1
+ steps:
+ - create-parameter:
+    id: create-parameter-1
+    name: name
+    processor:
+     substitute-processor:
+      token: this
+      replacement: that
+    value: value

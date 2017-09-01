@@ -1,3 +1,5 @@
+package com.emarte.regurgitator.test;
+
 import com.emarte.regurgitator.core.SequenceYmlLoader;
 import com.emarte.regurgitator.test.YmlLoaderTest;
 import org.junit.Test;
@@ -38,9 +40,4 @@ public class SequenceYmlLoaderTest extends YmlLoaderTest {
 	public void testFullLoad() throws Exception {
 		loadFile("classpath:/Sequence_fullLoad.yml");
 	}
-//
-//	@Test(expected = SAXException.class)
-//	public void testMissingStepYml() throws Exception {
-//		loadFromFile("classpath:/Sequence_missingStep.yml");
-//	}
 }

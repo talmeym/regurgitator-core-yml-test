@@ -1,0 +1,3 @@
+index-of-processor:
+ source: context:location
+ value: value

@@ -1,0 +1,6 @@
+create-parameter:
+ id: create-param-1
+ name: toTest1
+ source: context:location
+ processor:
+  test-value-processor:

@@ -1,0 +1,7 @@
+build-parameter:
+ id: build-param-2
+ name: toTest2
+ builder:
+  test-value-builder:
+ processor:
+  test-processor-2:

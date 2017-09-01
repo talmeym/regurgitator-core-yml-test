@@ -1,0 +1,9 @@
+sequence:
+ id: sequence-1
+ steps:
+ - create-response:
+    id: create-response-1
+    name: toTest1
+    source: context:location
+    processor:
+     test-value-processor:

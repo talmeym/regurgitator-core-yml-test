@@ -1,0 +1,7 @@
+sequence:
+ id: regurgitator-configuration-1
+ steps:
+ - create-parameter:
+    id: create-param-1
+    name: toTest1
+    source: context:location

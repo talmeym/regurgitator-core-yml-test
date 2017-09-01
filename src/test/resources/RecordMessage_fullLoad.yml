@@ -1,0 +1,6 @@
+sequence:
+ id: sequence-1
+ steps:
+  - record-message:
+     id: record-message-1
+     folder: /folder/folder

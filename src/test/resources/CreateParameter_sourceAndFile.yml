@@ -1,0 +1,5 @@
+create-parameter:
+ id: create-param-1
+ name: toTest1
+ file: classpath:/test.file
+ source: context:location

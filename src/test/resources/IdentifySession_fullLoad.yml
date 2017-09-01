@@ -1,0 +1,6 @@
+sequence:
+ id: sequence-1
+ steps:
+ - identify-session:
+    id: identify-session-1
+    source: context:location

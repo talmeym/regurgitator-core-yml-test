@@ -1,0 +1,12 @@
+decision:
+ id: decision-1
+ steps:
+ - test-step:
+    id: test-step-1
+ rules:
+ - id: rule-1
+   step: test-step-1
+   conditions:
+   - id: condition-1
+     source: context:location
+     contains: value

@@ -1,0 +1,4 @@
+identify-session:
+ id: identify-session-1
+ source: context:location
+ value: value

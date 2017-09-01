@@ -1,0 +1,7 @@
+sequence:
+ steps:
+ - generate-parameter:
+    name: name
+    generator:
+     number-generator:
+      max: 1234

@@ -1,0 +1,5 @@
+sequence:
+ id: regurgitator-configuration-1
+ steps:
+ - sequence-ref:
+    file: classpath:/CreateParameter_fullLoad.yml

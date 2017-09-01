@@ -1,0 +1,5 @@
+create-response:
+ id: create-response-1
+ name: toTest1
+ file: classpath:/test.file
+ source: context:location

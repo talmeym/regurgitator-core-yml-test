@@ -1,0 +1,10 @@
+sequence:
+ steps:
+ - create-parameter:
+    name: name
+    source: context:location
+    processor:
+     extract-processor:
+      id: extract-value-1
+      format: this is {0} test
+      index: 0

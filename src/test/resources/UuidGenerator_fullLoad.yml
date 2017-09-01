@@ -1,0 +1,6 @@
+sequence:
+ steps:
+ - generate-parameter:
+    name: name
+    generator:
+     uuid-generator:
