@@ -8,7 +8,6 @@ import com.emarte.regurgitator.core.YmlLoader;
 import java.util.Set;
 
 public class TestValueProcessorYmlLoader implements YmlLoader<ValueProcessor> {
-
     @Override
     public ValueProcessor load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         return new TestValueProcessor();
