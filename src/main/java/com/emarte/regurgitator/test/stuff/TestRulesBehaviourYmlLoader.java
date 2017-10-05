@@ -8,8 +8,8 @@ import com.emarte.regurgitator.core.YmlLoader;
 import java.util.Set;
 
 public class TestRulesBehaviourYmlLoader implements YmlLoader<RulesBehaviour> {
-	@Override
-	public RulesBehaviour load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
-		return new TestRulesBehaviour();
-	}
+    @Override
+    public RulesBehaviour load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
+        return new TestRulesBehaviour();
+    }
 }

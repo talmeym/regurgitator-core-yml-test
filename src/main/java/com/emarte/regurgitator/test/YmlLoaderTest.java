@@ -15,26 +15,26 @@ import static com.emarte.regurgitator.core.FileUtil.streamToString;
 import static org.junit.Assert.assertEquals;
 
 public class YmlLoaderTest {
-	private final YmlLoader toTest;
+    private final YmlLoader toTest;
 
-	public YmlLoaderTest(YmlLoader toTest) {
-		this.toTest = toTest;
-	}
+    public YmlLoaderTest(YmlLoader toTest) {
+        this.toTest = toTest;
+    }
 
-	protected Yaml getYaml(String filePath) throws IOException {
-		String yaml = streamToString(FileUtil.getInputStreamForFile(filePath));
-		return new Yaml((Map) new YamlReader(yaml).read());
-	}
+    protected Yaml getYaml(String filePath) throws IOException {
+        String yaml = streamToString(FileUtil.getInputStreamForFile(filePath));
+        return new Yaml((Map) new YamlReader(yaml).read());
+    }
 
-	protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
-		return toTest.load(getYaml(filePath), new HashSet<Object>()).toString();
-	}
+    protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
+        return toTest.load(getYaml(filePath), new HashSet<Object>()).toString();
+    }
 
-	protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, IOException {
-		assertEquals(expected, loadFromFile(filePath));
-	}
+    protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, IOException {
+        assertEquals(expected, loadFromFile(filePath));
+    }
 
-	protected final void assertExpectationFullLoad(String filePath, String expected) throws RegurgitatorException {
-		assertEquals(expected, loadFile(filePath).toString());
-	}
+    protected final void assertExpectationFullLoad(String filePath, String expected) throws RegurgitatorException {
+        assertEquals(expected, loadFile(filePath).toString());
+    }
 }

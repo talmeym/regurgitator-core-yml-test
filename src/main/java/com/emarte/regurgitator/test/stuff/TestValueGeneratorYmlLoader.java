@@ -8,8 +8,8 @@ import com.emarte.regurgitator.core.YmlLoader;
 import java.util.Set;
 
 public class TestValueGeneratorYmlLoader implements YmlLoader<ValueGenerator> {
-	@Override
-	public ValueGenerator load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
-		return new TestValueGenerator();
-	}
+    @Override
+    public ValueGenerator load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
+        return new TestValueGenerator();
+    }
 }
