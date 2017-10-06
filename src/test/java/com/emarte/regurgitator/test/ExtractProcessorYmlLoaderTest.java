@@ -19,5 +19,4 @@ public class ExtractProcessorYmlLoaderTest extends YmlLoaderTest {
     public void testFullLoadYml() throws Exception {
         loadFile("classpath:/ExtractProcessor_fullLoad.yml");
     }
-
 }

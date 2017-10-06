@@ -21,13 +21,13 @@ public class YmlLoaderTest {
         this.toTest = toTest;
     }
 
-    protected Yaml getYaml(String filePath) throws IOException {
-        String yaml = streamToString(FileUtil.getInputStreamForFile(filePath));
-        return new Yaml((Map) new YamlReader(yaml).read());
-    }
-
     protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
         return toTest.load(getYaml(filePath), new HashSet<Object>()).toString();
+    }
+
+    private Yaml getYaml(String filePath) throws IOException {
+        String yaml = streamToString(FileUtil.getInputStreamForFile(filePath));
+        return new Yaml((Map) new YamlReader(yaml).read());
     }
 
     protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, IOException {
