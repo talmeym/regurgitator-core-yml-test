@@ -1,9 +1,12 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.test;
 
 import com.emarte.regurgitator.core.BuildParameterYmlLoader;
 import com.emarte.regurgitator.core.ConfigurationFile;
 import com.emarte.regurgitator.core.RegurgitatorException;
-import com.emarte.regurgitator.test.YmlLoaderTest;
 import org.junit.Test;
 
 public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
