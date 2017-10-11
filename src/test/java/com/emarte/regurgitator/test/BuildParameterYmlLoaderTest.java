@@ -4,9 +4,7 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.BuildParameterYmlLoader;
-import com.emarte.regurgitator.core.ConfigurationFile;
-import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.*;
 import org.junit.Test;
 
 public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
