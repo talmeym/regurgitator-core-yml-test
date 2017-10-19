@@ -17,7 +17,7 @@ public class GenerateParameterYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testMinimumYml() throws Exception {
-        assertExpectation("classpath:/GenerateParameter_min.yml", "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.UuidGenerator:[],null]");
+        assertExpectation("classpath:/GenerateParameter_min.yml", "com.emarte.regurgitator.core.GenerateParameter:['generate-parameter-1',com.emarte.regurgitator.core.ParameterPrototype:['name',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueGenerator:[],null]");
     }
 
     @Test
