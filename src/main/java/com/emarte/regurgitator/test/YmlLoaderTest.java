@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.FileUtil.streamToString;
 import static org.junit.Assert.assertEquals;
 
@@ -22,12 +23,12 @@ public class YmlLoaderTest {
         this.toTest = toTest;
     }
 
-    protected String loadFromFile(String filePath) throws RegurgitatorException, IOException {
+    String loadFromFile(String filePath) throws RegurgitatorException, IOException {
         return toTest.load(getYaml(filePath), new HashSet<Object>()).toString();
     }
 
     private Yaml getYaml(String filePath) throws IOException {
-        String yaml = streamToString(FileUtil.getInputStreamForFile(filePath));
+        String yaml = streamToString(getInputStreamForFile(filePath));
         return new Yaml((Map) new YamlReader(yaml).read());
     }
 
