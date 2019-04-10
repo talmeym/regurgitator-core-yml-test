@@ -4,11 +4,11 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.core.SubstituteProcessorYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.SubstituteProcessor_min;
 
 public class SubstituteProcessorYmlLoaderTest extends YmlLoaderTest {
     public SubstituteProcessorYmlLoaderTest() {
@@ -16,12 +16,12 @@ public class SubstituteProcessorYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMinimumYml() throws Exception {
-        assertExpectation("classpath:/SubstituteProcessor_min.yml", "com.emarte.regurgitator.core.SubstituteProcessor:['this','that']");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/SubstituteProcessor_min.yml", SubstituteProcessor_min);
     }
 
     @Test
-    public void testFullLoadYml() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/SubstituteProcessor_fullLoad.yml");
     }
 }

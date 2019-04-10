@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.IndexOfProcessorYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class IndexOfProcessorYmlLoaderTest extends YmlLoaderTest {
     public IndexOfProcessorYmlLoaderTest() {
@@ -15,18 +16,18 @@ public class IndexOfProcessorYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_source.yml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],false]");
+    public void testValue() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_value.yml", IndexOfProcessor_value);
     }
 
     @Test
-    public void testValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_value.yml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[null,'value'],false]");
+    public void testSource() throws Exception {
+        assertExpectation("classpath:/IndexOfProcessor_source.yml", IndexOfProcessor_source);
     }
 
     @Test
     public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.yml", "com.emarte.regurgitator.core.IndexOfProcessor:[com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],'value'],false]");
+        assertExpectation("classpath:/IndexOfProcessor_sourceAndValue.yml", IndexOfProcessor_sourceAndValue);
     }
 
     @Test

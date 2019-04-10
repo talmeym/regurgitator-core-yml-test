@@ -4,7 +4,9 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.Yaml;
+import com.emarte.regurgitator.core.YmlLoader;
 import com.esotericsoftware.yamlbeans.YamlReader;
 
 import java.io.IOException;

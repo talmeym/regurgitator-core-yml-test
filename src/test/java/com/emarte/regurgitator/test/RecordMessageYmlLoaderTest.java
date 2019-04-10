@@ -8,6 +8,8 @@ import com.emarte.regurgitator.core.RecordMessageYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_folder;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.RecordMessage_min;
 
 public class RecordMessageYmlLoaderTest extends YmlLoaderTest {
     public RecordMessageYmlLoaderTest() {
@@ -16,16 +18,16 @@ public class RecordMessageYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testMin() throws Exception {
-        assertExpectation("classpath:/RecordMessage_min.yml", "com.emarte.regurgitator.core.RecordMessage:['record-message-1',null]");
+        assertExpectation("classpath:/RecordMessage_min.yml", RecordMessage_min);
     }
 
     @Test
     public void testFolder() throws Exception {
-        assertExpectation("classpath:/RecordMessage_folder.yml", "com.emarte.regurgitator.core.RecordMessage:['record-message-1','/folder/folder']");
+        assertExpectation("classpath:/RecordMessage_folder.yml", RecordMessage_folder);
     }
 
     @Test
-    public void testFullLoadJson() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/RecordMessage_fullLoad.yml");
     }
 }

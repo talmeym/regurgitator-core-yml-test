@@ -4,8 +4,12 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.BuildParameterYmlLoader;
+import com.emarte.regurgitator.core.RegurgitatorException;
 import org.junit.Test;
+
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
     public BuildParameterYmlLoaderTest() {
@@ -13,23 +17,23 @@ public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMinimumYml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_min.yml", "com.emarte.regurgitator.core.BuildParameter:['build-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],null]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_min.yml", BuildParameter_min);
     }
 
     @Test
-    public void testMaximumYml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_max.yml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/BuildParameter_max.yml", BuildParameter_max);
     }
 
     @Test
-    public void testMaximumFlatYml() throws Exception {
-        assertExpectation("classpath:/BuildParameter_maxFlat.yml", "com.emarte.regurgitator.core.BuildParameter:['build-param-2',com.emarte.regurgitator.core.ParameterPrototype:['toTest2',com.emarte.regurgitator.core.NumberType:[],com.emarte.regurgitator.core.ConflictPolicy:LEAVE],'something',com.emarte.regurgitator.test.stuff.TestValueBuilder:[],com.emarte.regurgitator.test.stuff.TestValueProcessor:[]]");
+    public void testMaximumFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_maxFlat.yml", BuildParameter_maxFlat);
     }
 
     @Test
     public void testFullLoad() throws Exception {
-        ConfigurationFile.loadFile("classpath:/BuildParameter_fullLoad.yml");
+        loadFile("classpath:/BuildParameter_fullLoad.yml");
     }
 
     @Test(expected = RegurgitatorException.class)

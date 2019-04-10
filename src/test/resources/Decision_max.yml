@@ -36,5 +36,5 @@ decision:
       test-condition-behaviour:
      value: value4
    - id: condition-5
-     source: context:location4
+     source: context:location5
      test-condition-behaviour: value5

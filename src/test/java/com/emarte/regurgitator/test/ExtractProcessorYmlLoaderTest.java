@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.ExtractProcessorYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.ExtractProcessor_min;
 
 public class ExtractProcessorYmlLoaderTest extends YmlLoaderTest {
     public ExtractProcessorYmlLoaderTest() {
@@ -15,12 +16,12 @@ public class ExtractProcessorYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMinimumYml() throws Exception {
-        assertExpectation("classpath:/ExtractProcessor_min.yml", "com.emarte.regurgitator.core.ExtractProcessor:['this is {0} test',0]");
+    public void testMinimum() throws Exception {
+        assertExpectation("classpath:/ExtractProcessor_min.yml", ExtractProcessor_min);
     }
 
     @Test
-    public void testFullLoadYml() throws Exception {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/ExtractProcessor_fullLoad.yml");
     }
 }
