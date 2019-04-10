@@ -8,6 +8,7 @@ import com.emarte.regurgitator.core.SequenceRefYmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
 
 public class SequenceRefYmlLoaderTest extends YmlLoaderTest {
     public SequenceRefYmlLoaderTest() {
@@ -16,7 +17,7 @@ public class SequenceRefYmlLoaderTest extends YmlLoaderTest {
 
     @Test
     public void testMinimum() throws Exception {
-        assertExpectation("classpath:/SequenceRef_min.yml", "com.emarte.regurgitator.core.Sequence:['regurgitator-configuration-1',[com.emarte.regurgitator.core.CreateParameter:['create-param-1',com.emarte.regurgitator.core.ParameterPrototype:['toTest1',com.emarte.regurgitator.core.StringType:[],com.emarte.regurgitator.core.ConflictPolicy:REPLACE],'parameters',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['context:location'],null],[]]],null]");
+        assertExpectation("classpath:/SequenceRef_min.yml", SequenceRef_min);
     }
 
     @Test
