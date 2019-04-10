@@ -1,4 +1,5 @@
 create-response:
  id: create-response-1
  value: value
- processor: test-value-processor
+ processor:
+  test-value-processor:
