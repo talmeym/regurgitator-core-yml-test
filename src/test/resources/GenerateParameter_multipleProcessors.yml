@@ -5,6 +5,6 @@ generate-parameter:
   merge: LEAVE
   generator:
     test-value-generator:
-  processor:
+  processors:
     - test-value-processor:
     - test-value-processor:

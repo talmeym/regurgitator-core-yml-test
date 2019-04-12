@@ -32,6 +32,16 @@ public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessors.yml", BuildParameter_multipleProcessors);
+    }
+
+    @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/BuildParameter_multipleProcessorsFlat.yml", BuildParameter_multipleProcessorsFlat);
+    }
+
+    @Test
     public void testFullLoad() throws Exception {
         loadFile("classpath:/BuildParameter_fullLoad.yml");
     }
@@ -59,5 +69,20 @@ public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
     @Test(expected = RegurgitatorException.class)
     public void testInvalidYmlMissingProcessorClass() throws Exception {
         loadFromFile("classpath:/BuildParameter_missingProcessorClass.yml");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonBothProcessorAndProcessorsPresent() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAndProcessors.yml");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonProcessorContainsArray() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorAsArray.yml");
+    }
+
+    @Test(expected = RegurgitatorException.class)
+    public void testInvalidJsonProcessorsContainsObject() throws Exception {
+        loadFromFile("classpath:/BuildParameter_processorsAsObject.yml");
     }
 }

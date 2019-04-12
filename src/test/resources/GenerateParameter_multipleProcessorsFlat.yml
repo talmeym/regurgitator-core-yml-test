@@ -1,0 +1,8 @@
+generate-parameter:
+  id: generate-parameter-1
+  name: context:name
+  type: NUMBER
+  merge: LEAVE
+  generator:
+    test-value-generator:
+  processors: test-value-processor,test-value-processor

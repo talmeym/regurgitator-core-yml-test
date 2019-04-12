@@ -1,0 +1,6 @@
+create-response:
+ id: create-response-1
+ value: value
+ processors:
+  - test-value-processor:
+  - test-value-processor:

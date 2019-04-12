@@ -32,8 +32,13 @@ public class GenerateParameterYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMaximumMultipleProcessors() throws Exception {
-        assertExpectation("classpath:/GenerateParameter_maxMultipleProcessors.yml", GenerateParameter_maxMultipleProcessors);
+    public void testMultipleProcessors() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_multipleProcessors.yml", GenerateParameter_multipleProcessors);
+    }
+
+    @Test
+    public void testMultipleProcessorsFlat() throws Exception {
+        assertExpectation("classpath:/GenerateParameter_multipleProcessorsFlat.yml", GenerateParameter_multipleProcessorsFlat);
     }
 
     @Test
