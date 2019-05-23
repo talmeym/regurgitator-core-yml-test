@@ -1,0 +1,4 @@
+list-processor:
+  processors:
+    - test-value-processor:
+    - test-value-processor:

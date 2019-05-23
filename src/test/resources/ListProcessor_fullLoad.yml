@@ -1,0 +1,10 @@
+sequence:
+  steps:
+    - create-parameter:
+        name: name
+        source: context:location
+        processor:
+          list-processor:
+            processors:
+              - test-value-processor:
+              - test-value-processor:
