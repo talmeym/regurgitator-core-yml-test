@@ -1,0 +1,3 @@
+at-index-processor:
+ source: context:location
+ value: value

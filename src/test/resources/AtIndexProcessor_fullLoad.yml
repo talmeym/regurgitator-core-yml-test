@@ -4,5 +4,5 @@ sequence:
     name: name
     source: context:location
     processor:
-     index-processor:
+     at-index-processor:
       source: context:location
