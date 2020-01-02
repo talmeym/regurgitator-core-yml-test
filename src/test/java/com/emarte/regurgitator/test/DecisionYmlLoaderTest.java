@@ -17,7 +17,7 @@ public class DecisionYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testMimimum() throws Exception {
+    public void testMinimum() throws Exception {
         assertExpectation("classpath:/Decision_min.yml", Decision_min);
     }
 
