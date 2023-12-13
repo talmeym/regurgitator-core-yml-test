@@ -19,19 +19,19 @@ import static com.emarte.regurgitator.core.FileUtil.streamToString;
 import static org.junit.Assert.assertEquals;
 
 public class YmlLoaderTest {
-    private final YmlLoader toTest;
+    private final YmlLoader<?> toTest;
 
-    public YmlLoaderTest(YmlLoader toTest) {
+    public YmlLoaderTest(YmlLoader<?> toTest) {
         this.toTest = toTest;
     }
 
     String loadFromFile(String filePath) throws RegurgitatorException, IOException {
-        return toTest.load(getYaml(filePath), new HashSet<Object>()).toString();
+        return toTest.load(getYaml(filePath), new HashSet<>()).toString();
     }
 
     private Yaml getYaml(String filePath) throws IOException {
         String yaml = streamToString(getInputStreamForFile(filePath));
-        return new Yaml((Map) new YamlReader(yaml).read());
+        return new Yaml((Map<?, ?>) new YamlReader(yaml).read());
     }
 
     protected final void assertExpectation(String filePath, String expected) throws RegurgitatorException, IOException {
