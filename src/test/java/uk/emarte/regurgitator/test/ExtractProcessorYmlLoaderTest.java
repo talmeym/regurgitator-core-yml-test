@@ -4,11 +4,11 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.ExtractProcessorYmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.core.ExtractProcessorYmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.ExtractProcessor_min;
 
 public class ExtractProcessorYmlLoaderTest extends YmlLoaderTest {
     public ExtractProcessorYmlLoaderTest() {

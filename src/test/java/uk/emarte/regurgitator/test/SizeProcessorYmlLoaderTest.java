@@ -4,11 +4,12 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.SizeProcessorYmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.core.SizeProcessorYmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.SizeProcessor;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.SizeProcessor_asIndex;
 
 public class SizeProcessorYmlLoaderTest extends YmlLoaderTest {
     public SizeProcessorYmlLoaderTest() {

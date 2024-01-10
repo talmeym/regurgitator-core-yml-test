@@ -4,12 +4,12 @@
  */
 package uk.emarte.regurgitator.test;
 
+import org.junit.Test;
 import uk.emarte.regurgitator.core.ListProcessorYmlLoader;
 import uk.emarte.regurgitator.core.RegurgitatorException;
-import org.junit.Test;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.ListProcessor;
 
 public class ListProcessorYmlLoaderTest extends YmlLoaderTest {
     public ListProcessorYmlLoaderTest() {

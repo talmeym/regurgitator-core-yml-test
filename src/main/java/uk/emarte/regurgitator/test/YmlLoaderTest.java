@@ -4,19 +4,19 @@
  */
 package uk.emarte.regurgitator.test;
 
+import com.esotericsoftware.yamlbeans.YamlReader;
 import uk.emarte.regurgitator.core.RegurgitatorException;
 import uk.emarte.regurgitator.core.Yaml;
 import uk.emarte.regurgitator.core.YmlLoader;
-import com.esotericsoftware.yamlbeans.YamlReader;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static uk.emarte.regurgitator.core.FileUtil.streamToString;
-import static org.junit.Assert.assertEquals;
 
 public class YmlLoaderTest {
     private final YmlLoader toTest;

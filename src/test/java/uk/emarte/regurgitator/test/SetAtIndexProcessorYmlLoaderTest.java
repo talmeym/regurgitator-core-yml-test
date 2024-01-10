@@ -4,12 +4,12 @@
  */
 package uk.emarte.regurgitator.test;
 
+import org.junit.Test;
 import uk.emarte.regurgitator.core.RegurgitatorException;
 import uk.emarte.regurgitator.core.SetAtIndexProcessorYmlLoader;
-import org.junit.Test;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.SetAtIndexProcessor_BothSource;
 
 public class SetAtIndexProcessorYmlLoaderTest extends YmlLoaderTest {
     public SetAtIndexProcessorYmlLoaderTest() {

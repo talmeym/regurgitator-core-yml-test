@@ -4,11 +4,12 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.core.NumberGeneratorYmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.core.NumberGeneratorYmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.*;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator;
+import static uk.emarte.regurgitator.test.CoreLoaderTestExpectations.NumberGenerator_max;
 
 public class NumberGeneratorYmlLoaderTest extends YmlLoaderTest {
     public NumberGeneratorYmlLoaderTest() {
