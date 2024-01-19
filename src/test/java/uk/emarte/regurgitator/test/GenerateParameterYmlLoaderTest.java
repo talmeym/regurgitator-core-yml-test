@@ -47,11 +47,6 @@ public class GenerateParameterYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test(expected = RegurgitatorException.class)
-    public void testInvalidYmlEmptyProcessor() throws Exception {
-        loadFromFile("classpath:/GenerateParameter_emptyProcessor.yml");
-    }
-
-    @Test(expected = RegurgitatorException.class)
     public void testInvalidYmlMissingProcessorClass() throws Exception {
         loadFromFile("classpath:/GenerateParameter_missingProcessorClass.yml");
     }

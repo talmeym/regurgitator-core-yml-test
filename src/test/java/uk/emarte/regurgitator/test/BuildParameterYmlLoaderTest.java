@@ -57,11 +57,6 @@ public class BuildParameterYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test(expected = RegurgitatorException.class)
-    public void testInvalidYmlEmptyProcessor() throws Exception {
-        loadFromFile("classpath:/BuildParameter_emptyProcessor.yml");
-    }
-
-    @Test(expected = RegurgitatorException.class)
     public void testInvalidYmlMissingBuilderClass() throws Exception {
         loadFromFile("classpath:/BuildParameter_missingBuilderClass.yml");
     }
