@@ -16,7 +16,7 @@ public class UuidGeneratorYmlLoaderTest extends YmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testGenerator() throws Exception {
         assertExpectation("classpath:/UuidGenerator.yml", UuidGenerator);
     }
 
